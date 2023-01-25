@@ -30,7 +30,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         Employee employeeToSave = employeeMapper.toEntity(employeeDTO);
         employeeToSave.setEmployeeCode(UUID.randomUUID().toString());
         Employee employee = employeeRepository.save(employeeToSave);
-        return employeeMapper.toDto(employee);
+        EmployeeDTO newEmployee = employeeMapper.toDto(employee);
+        return newEmployee;
     }
 
     @Override

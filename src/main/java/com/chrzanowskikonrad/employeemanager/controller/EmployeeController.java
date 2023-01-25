@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/employee")
+@RequestMapping("/api/employee")
 @CrossOrigin
 public class EmployeeController {
 
@@ -37,7 +37,7 @@ public class EmployeeController {
         return new ResponseEntity<>(newEmployeeDTO, HttpStatus.CREATED);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public ResponseEntity<EmployeeDTO> updateEmployee(@RequestBody EmployeeDTO employeeDTO) {
         EmployeeDTO updatedEmployee = employeeService.updateEmployee(employeeDTO);
         return new ResponseEntity<>(updatedEmployee, HttpStatus.OK);
