@@ -1,8 +1,8 @@
 package com.chrzanowskikonrad.employeemanager.service.impl;
 
-import com.chrzanowskikonrad.employeemanager.domain.EmployeeDTO;
+import com.chrzanowskikonrad.employeemanager.domain.Employee;
 import com.chrzanowskikonrad.employeemanager.exception.UserNotFoundException;
-import com.chrzanowskikonrad.employeemanager.model.Employee;
+import com.chrzanowskikonrad.employeemanager.model.EmployeeDTO;
 import com.chrzanowskikonrad.employeemanager.repository.EmployeeRepository;
 import com.chrzanowskikonrad.employeemanager.service.EmployeeService;
 import com.chrzanowskikonrad.employeemanager.service.mapper.EmployeeMapper;

@@ -1,8 +1,6 @@
 package com.chrzanowskikonrad.employeemanager.service;
 
-import com.chrzanowskikonrad.employeemanager.domain.EmployeeDTO;
-import com.chrzanowskikonrad.employeemanager.model.Employee;
-import org.springframework.stereotype.Service;
+import com.chrzanowskikonrad.employeemanager.model.EmployeeDTO;
 
 import java.util.List;
 

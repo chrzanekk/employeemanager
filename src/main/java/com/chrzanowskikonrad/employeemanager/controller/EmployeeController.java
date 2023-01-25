@@ -1,6 +1,6 @@
 package com.chrzanowskikonrad.employeemanager.controller;
 
-import com.chrzanowskikonrad.employeemanager.domain.EmployeeDTO;
+import com.chrzanowskikonrad.employeemanager.model.EmployeeDTO;
 import com.chrzanowskikonrad.employeemanager.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

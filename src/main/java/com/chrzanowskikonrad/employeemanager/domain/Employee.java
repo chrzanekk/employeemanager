@@ -1,4 +1,4 @@
-package com.chrzanowskikonrad.employeemanager.model;
+package com.chrzanowskikonrad.employeemanager.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;

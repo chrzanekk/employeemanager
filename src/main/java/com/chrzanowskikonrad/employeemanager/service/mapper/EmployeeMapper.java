@@ -1,7 +1,7 @@
 package com.chrzanowskikonrad.employeemanager.service.mapper;
 
-import com.chrzanowskikonrad.employeemanager.domain.EmployeeDTO;
-import com.chrzanowskikonrad.employeemanager.model.Employee;
+import com.chrzanowskikonrad.employeemanager.domain.Employee;
+import com.chrzanowskikonrad.employeemanager.model.EmployeeDTO;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring", uses = {})

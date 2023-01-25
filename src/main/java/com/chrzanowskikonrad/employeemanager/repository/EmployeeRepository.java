@@ -1,6 +1,6 @@
 package com.chrzanowskikonrad.employeemanager.repository;
 
-import com.chrzanowskikonrad.employeemanager.model.Employee;
+import com.chrzanowskikonrad.employeemanager.domain.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

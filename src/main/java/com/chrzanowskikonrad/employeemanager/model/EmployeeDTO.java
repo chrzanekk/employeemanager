@@ -1,4 +1,4 @@
-package com.chrzanowskikonrad.employeemanager.domain;
+package com.chrzanowskikonrad.employeemanager.model;
 
 public class EmployeeDTO {
 
