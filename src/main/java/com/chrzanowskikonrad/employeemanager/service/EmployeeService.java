@@ -1,42 +1,21 @@
 package com.chrzanowskikonrad.employeemanager.service;
 
-import com.chrzanowskikonrad.employeemanager.exception.UserNotFoundException;
 import com.chrzanowskikonrad.employeemanager.model.Employee;
-import com.chrzanowskikonrad.employeemanager.repository.EmployeeRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
-public class EmployeeService {
-    private final EmployeeRepository employeeRepository;
+public interface EmployeeService {
 
-    @Autowired
-    public EmployeeService(EmployeeRepository employeeRepository) {
-        this.employeeRepository = employeeRepository;
-    }
 
-    public Employee addEmployee(Employee employee) {
-        employee.setEmployeeCode(UUID.randomUUID().toString());
-        return employeeRepository.save(employee);
-    }
+    Employee addEmployee(Employee employee);
 
-    public List<Employee> findAllEmployees() {
-        return employeeRepository.findAll();
-    }
+    List<Employee> findAllEmployees();
 
-    public Employee updateEmployee(Employee employee) {
-        return employeeRepository.save(employee);
-    }
+    Employee updateEmployee(Employee employee);
 
-    public Employee findEmployeeById(Long id){
-        return employeeRepository.findEmployeeById(id).orElseThrow(()->new UserNotFoundException("User by id " + id + "was not found"));
-    }
+    Employee findEmployeeById(Long id);
 
-    public void deleteEmployee(Long id) {
-        employeeRepository.deleteEmployeeById(id);
-    }
-
+    void deleteEmployee(Long id);
 }

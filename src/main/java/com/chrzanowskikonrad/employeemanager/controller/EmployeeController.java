@@ -1,4 +1,4 @@
-package com.chrzanowskikonrad.employeemanager;
+package com.chrzanowskikonrad.employeemanager.controller;
 
 import com.chrzanowskikonrad.employeemanager.model.Employee;
 import com.chrzanowskikonrad.employeemanager.service.EmployeeService;
