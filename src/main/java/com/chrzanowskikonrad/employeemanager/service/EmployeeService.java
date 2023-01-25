@@ -1,21 +1,20 @@
 package com.chrzanowskikonrad.employeemanager.service;
 
+import com.chrzanowskikonrad.employeemanager.domain.EmployeeDTO;
 import com.chrzanowskikonrad.employeemanager.model.Employee;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface EmployeeService {
 
+    EmployeeDTO addEmployee(EmployeeDTO employeeDTO);
 
-    Employee addEmployee(Employee employee);
+    List<EmployeeDTO> findAllEmployees();
 
-    List<Employee> findAllEmployees();
+    EmployeeDTO updateEmployee(EmployeeDTO employeeDTO);
 
-    Employee updateEmployee(Employee employee);
-
-    Employee findEmployeeById(Long id);
+    EmployeeDTO findEmployeeById(Long id);
 
     void deleteEmployee(Long id);
 }

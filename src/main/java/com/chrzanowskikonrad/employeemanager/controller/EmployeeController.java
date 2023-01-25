@@ -1,6 +1,6 @@
 package com.chrzanowskikonrad.employeemanager.controller;
 
-import com.chrzanowskikonrad.employeemanager.model.Employee;
+import com.chrzanowskikonrad.employeemanager.domain.EmployeeDTO;
 import com.chrzanowskikonrad.employeemanager.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,36 +12,34 @@ import java.util.List;
 @RequestMapping("/employee")
 @CrossOrigin
 public class EmployeeController {
-    private final EmployeeService employeeService;
 
+    private final EmployeeService employeeService;
 
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
 
-
     @GetMapping("/all")
-    public ResponseEntity<List<Employee>> getAllEmployees() {
-        List<Employee> employeeList = employeeService.findAllEmployees();
+    public ResponseEntity<List<EmployeeDTO>> getAllEmployees() {
+        List<EmployeeDTO> employeeList = employeeService.findAllEmployees();
         return new ResponseEntity<>(employeeList, HttpStatus.OK);
     }
 
     @GetMapping("/find/{id}")
-    public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") Long id) {
-        Employee employee = employeeService.findEmployeeById(id);
-        return new ResponseEntity<>(employee, HttpStatus.OK);
+    public ResponseEntity<EmployeeDTO> getEmployeeById(@PathVariable("id") Long id) {
+        EmployeeDTO employeeDTO = employeeService.findEmployeeById(id);
+        return new ResponseEntity<>(employeeDTO, HttpStatus.OK);
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Employee> addEmployee(@RequestBody Employee employee) {
-        Employee newEmployee = employeeService.addEmployee(employee);
-        return new ResponseEntity<>(newEmployee, HttpStatus.CREATED);
+    public ResponseEntity<EmployeeDTO> addEmployee(@RequestBody EmployeeDTO employeeDTO) {
+        EmployeeDTO newEmployeeDTO = employeeService.addEmployee(employeeDTO);
+        return new ResponseEntity<>(newEmployeeDTO, HttpStatus.CREATED);
     }
 
-
     @PostMapping("/update")
-    public ResponseEntity<Employee> updateEmployee(@RequestBody Employee employee) {
-        Employee updatedEmployee = employeeService.updateEmployee(employee);
+    public ResponseEntity<EmployeeDTO> updateEmployee(@RequestBody EmployeeDTO employeeDTO) {
+        EmployeeDTO updatedEmployee = employeeService.updateEmployee(employeeDTO);
         return new ResponseEntity<>(updatedEmployee, HttpStatus.OK);
     }
 
@@ -50,6 +48,5 @@ public class EmployeeController {
         employeeService.deleteEmployee(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
 
 }

@@ -1,6 +1,6 @@
 package com.chrzanowskikonrad.employeemanager.domain;
 
-public class EmlpoyeeDTO {
+public class EmployeeDTO {
 
     private Long id;
     private String name;
@@ -10,11 +10,11 @@ public class EmlpoyeeDTO {
     private String imageUrl;
     private String employeeCode;
 
-    public EmlpoyeeDTO() {
+    public EmployeeDTO() {
     }
 
-    private EmlpoyeeDTO(Long id, String name, String email, String jobTitle, String phone, String imageUrl,
-                  String employeeCode) {
+    private EmployeeDTO(Long id, String name, String email, String jobTitle, String phone, String imageUrl,
+                        String employeeCode) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -24,7 +24,7 @@ public class EmlpoyeeDTO {
         this.employeeCode = employeeCode;
     }
 
-    private EmlpoyeeDTO(Builder builder) {
+    private EmployeeDTO(Builder builder) {
         id = builder.id;
         name = builder.name;
         email = builder.email;
@@ -114,8 +114,8 @@ public class EmlpoyeeDTO {
             return this;
         }
 
-        public EmlpoyeeDTO build() {
-            return new EmlpoyeeDTO(this);
+        public EmployeeDTO build() {
+            return new EmployeeDTO(this);
         }
     }
 }
