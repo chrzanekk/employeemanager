@@ -90,6 +90,19 @@ public class EmployeeDTO {
         this.employeeCode = employeeCode;
     }
 
+    @Override
+    public String toString() {
+        return "EmployeeDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", jobTitle='" + jobTitle + '\'' +
+                ", phone='" + phone + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", employeeCode='" + employeeCode + '\'' +
+                '}';
+    }
+
     public static final class Builder {
         private Long id;
         private String name;
